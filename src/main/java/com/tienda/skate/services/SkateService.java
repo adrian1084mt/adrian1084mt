@@ -26,7 +26,7 @@ public class SkateService {
         return skateRepository.getSkate(id);
     }
 
-    public void save(Skate skate) {
+    public void saveOld(Skate skate) {
         if (skate.getId() == null) {
             skateRepository.save(skate);
         } else {
@@ -39,7 +39,7 @@ public class SkateService {
         }
     }
 
-    public Skate saveOld(Skate skate) {
+    public Skate save(Skate skate) {
         if (skate.getId() == null) {
             return skateRepository.save(skate);
         } else {

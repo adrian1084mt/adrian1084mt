@@ -33,14 +33,9 @@ public class ReservationController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Reservation reservation) {
-        service.save(reservation);
-    }
-
-    /*@PostMapping("/save")
     public Reservation add(@RequestBody Reservation reservation) {
         return service.save(reservation);
-    }*/
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Reservation reservation, @PathVariable Integer id) {

@@ -2,7 +2,7 @@ package com.tienda.skate.controller;
 
 import com.tienda.skate.model.Category;
 import com.tienda.skate.services.CategoryService;
-import org.springframework.beans.factory.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,13 +33,9 @@ public class CategoryController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Category category) {
-        service.save(category);
+    public Category add(@RequestBody Category category) {
+        return service.save(category);
     }
-
-    //public Category add(@RequestBody Category category) {
-    //    return service.save(category);
-    //}
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Category category, @PathVariable Integer id) {

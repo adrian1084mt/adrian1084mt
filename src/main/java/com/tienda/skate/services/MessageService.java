@@ -22,7 +22,7 @@ public class MessageService {
         return messageRepository.getMessage(id);
     }
 
-    public void save(Message mensaje) {
+    public void saveOld(Message mensaje) {
         if (mensaje.getIdMessage() == 0) {
             messageRepository.save(mensaje);
         } else {
@@ -35,7 +35,7 @@ public class MessageService {
         }
     }
 
-    public Message saveOld(Message mensaje) {
+    public Message save(Message mensaje) {
         if (mensaje.getIdMessage() == 0) {
             return messageRepository.save(mensaje);
         } else {

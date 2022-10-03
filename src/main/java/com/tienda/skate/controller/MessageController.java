@@ -33,12 +33,9 @@ public class MessageController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Message message) {
-        service.save(message);
-    }
-    /*public Message add(@RequestBody Message message) {
+    public Message add(@RequestBody Message message) {
         return service.save(message);
-    }*/
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Message message, @PathVariable Integer id) {

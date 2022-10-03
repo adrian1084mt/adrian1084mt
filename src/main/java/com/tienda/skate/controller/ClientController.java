@@ -33,13 +33,9 @@ public class ClientController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Client client) {
-        service.save(client);
+    public Client add(@RequestBody Client client) {
+        return service.save(client);
     }
-
-    //public Client add(@RequestBody Client client) {
-        //return service.save(client);
-    //}
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Client client, @PathVariable Integer id) {

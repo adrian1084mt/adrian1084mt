@@ -33,12 +33,9 @@ public class SkateController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Skate reservation) {
-        service.save(reservation);
-    }
-    /*public Skate add(@RequestBody Skate reservation) {
+    public Skate add(@RequestBody Skate reservation) {
         return service.save(reservation);
-    }*/
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Skate reservation, @PathVariable Integer id) {

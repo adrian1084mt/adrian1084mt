@@ -33,12 +33,9 @@ public class AdminController {
     }
 
     @PostMapping("/save")
-    public void add(@RequestBody Admin admin) {
-        service.save(admin);
-    }
-    /*public Admin add(@RequestBody Admin admin) {
+    public Admin add(@RequestBody Admin admin) {
         return service.save(admin);
-    }*/
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Admin admin, @PathVariable Integer id) {

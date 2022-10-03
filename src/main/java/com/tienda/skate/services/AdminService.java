@@ -23,7 +23,7 @@ public class AdminService {
         return adminRepository.getAdmin(id);
     }
 
-    public void save(Admin administrador) {
+    public void saveOld(Admin administrador) {
         if (administrador.getId() == 0) {
             adminRepository.save(administrador);
         } else {
@@ -36,7 +36,7 @@ public class AdminService {
         }
     }
 
-    public Admin saveOld(Admin administrador) {
+    public Admin save(Admin administrador) {
         if (administrador.getId() == 0) {
             return adminRepository.save(administrador);
         } else {

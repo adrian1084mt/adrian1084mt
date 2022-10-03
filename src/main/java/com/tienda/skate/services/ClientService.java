@@ -23,7 +23,7 @@ public class ClientService {
         return clientRepository.getClient(id);
     }
 
-    public void save(Client firstClient) {
+    public void saveOld(Client firstClient) {
         if (firstClient.getIdClient() == 0) {
             clientRepository.save(firstClient);
         } else {
@@ -36,7 +36,7 @@ public class ClientService {
         }
     }
 
-    public Client saveOld(Client firstClient) {
+    public Client save(Client firstClient) {
         if (firstClient.getIdClient() == 0) {
             return clientRepository.save(firstClient);
         } else {

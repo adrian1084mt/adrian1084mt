@@ -22,7 +22,7 @@ public class CategoryService {
         return categoryRepository.getCategory(id);
     }
 
-    public void save(Category category) {
+    public void saveOld(Category category) {
         if (category.getId() == null) {
             categoryRepository.save(category);
         } else {
@@ -35,7 +35,7 @@ public class CategoryService {
         }
     }
 
-    public Category saveOld(Category category) {
+    public Category save(Category category) {
         if (category.getId() == null) {
             return categoryRepository.save(category);
         } else {

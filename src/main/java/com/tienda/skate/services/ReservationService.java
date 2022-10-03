@@ -22,7 +22,7 @@ public class ReservationService {
         return reservationRepository.getReservation(id);
     }
 
-    public void save(Reservation reservacion) {
+    public void saveOld(Reservation reservacion) {
         if (reservacion.getIdReservation() == 0) {
             reservationRepository.save(reservacion);
         } else {
@@ -35,7 +35,7 @@ public class ReservationService {
         }
     }
 
-    public Reservation saveOld(Reservation reservacion) {
+    public Reservation save(Reservation reservacion) {
         if (reservacion.getIdReservation() == 0) {
             return reservationRepository.save(reservacion);
         } else {
